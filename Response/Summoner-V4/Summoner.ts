@@ -1,4 +1,4 @@
-export default interface Summoner {
+export interface Summoner {
   /**
    * Encrypted account ID. Max length 56 characters.
   */

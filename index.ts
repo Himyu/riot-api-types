@@ -1,17 +1,17 @@
-export {BuildingType, TowerType} from './Buildings'
-export {LaneType, Role, Lane} from './Lanes'
-export {MonsterType, MonsterSubType, DragonSoul } from './Monster'
-export {Position} from './Position'
-export {Region, getRegionByServer} from './Region'
-export {Server} from './Server'
+export * from './Buildings'
+export * from './Lanes'
+export * from './Monster'
+export * from './Position'
+export * from './Region'
+export * from './Server'
 
 // Requests 
-export * as MatchRequest from './Request/Match-V5/MatchRequest'
-export {MatchListRequest, MatchListFilter} from './Request/Match-V5/MatchlistRequest'
-export * as SummonerRequests from './Request/Summoner-V4/SummonerRequests'
+export * from './Request/Match-V5/MatchRequest'
+export * from './Request/Match-V5/MatchlistRequest'
+export * from './Request/Summoner-V4/SummonerRequests'
 
 // Response
-export * as Match from './Response/Match-V5/Match'
+export * from './Response/Match-V5/Match'
 export type MatchList = Array<string>
-export * as MatchTimeline from './Response/Match-V5/MatchTimeline'
-export * as Summoner from './Response/Summoner-V4/Summoner'
+export * from './Response/Match-V5/MatchTimeline'
+export * from './Response/Summoner-V4/Summoner'
