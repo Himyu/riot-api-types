@@ -8,9 +8,13 @@ export enum MonsterSubType {
   EARTH_DRAGON = "EARTH_DRAGON",
   WATER_DRAGON = "WATER_DRAGON",
   FIRE_DRAGON = "FIRE_DRAGON",
-  AIR_DRAGON = "AIR_DRAGON"
+  AIR_DRAGON = "AIR_DRAGON",
+  ELDER_DRAGON = "ELDER_DRAGON"
 }
 
 export enum DragonSoul {
-  Infernal = "Infernal"
+  Cloud = "Cloud",
+  Infernal = "Infernal",
+  Mountain = "Mountain",
+  Ocean = "Ocean"
 }
