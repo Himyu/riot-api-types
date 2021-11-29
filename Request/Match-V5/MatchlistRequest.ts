@@ -1,36 +1,35 @@
 import { Region } from '../../Region'
 
-export default interface MatchlistRequest {
+export default interface MatchListRequest {
+  puuid: string
   region: Region
-  /**
-   * Start index: Defaults to 0
-  */
-  start: number
-  /**
-   * Match id count: Defaults to 20. Valid values: 0 to 100
-  */
-  count: number
 }
 
-export interface MatchlistFilter {
+export interface MatchListFilter {
   /**
-   * Set of champion IDs for filtering the match list.
+   * Epoch timestamp in seconds. The matchlist started storing timestamps on June 16th, 2021. Any matches played before June 16th, 2021 won't be included in the results if the startTime filter is set.
   */
-  champion: number[]
+  startTime: number
   /**
-  * Set of queue IDs for filtering the match list.
-  * Examples:
-  * 400: normal games
-  * 420: solo duo
-  * 440: flex
-  */
-  queue: number[]
-  /**
-  * The end time to use for filtering match list specified as epoch milliseconds. If beginTime is specified, but not endTime, then endTime defaults to the the current unix timestamp in milliseconds (the maximum time range limitation is not observed in this specific case). If endTime is specified, but not beginTime, then beginTime defaults to the start of the account's match history returning a 400 due to the maximum time range limitation. If both are specified, then endTime should be greater than beginTime. The maximum time range allowed is one week, otherwise a 400 error code is returned.
+   * Epoch timestamp in seconds.
   */
   endTime: number
   /**
-  * The begin time to use for filtering match list specified as epoch milliseconds. If beginTime is specified, but not endTime, then endTime defaults to the the current unix timestamp in milliseconds (the maximum time range limitation is not observed in this specific case). If endTime is specified, but not beginTime, then beginTime defaults to the start of the account's match history returning a 400 due to the maximum time range limitation. If both are specified, then endTime should be greater than beginTime. The maximum time range allowed is one week, otherwise a 400 error code is returned.
+   * Filter the list of match ids by a specific queue id. This filter is mutually inclusive of the type filter meaning any match ids returned must match both the queue and type filters.
+   * Refer to the Game Constants documentation.
+   * https://static.developer.riotgames.com/docs/lol/queues.json
   */
-  beginTime: number
+  queue: number
+  /**
+   * Filter the list of match ids by the type of match. This filter is mutually inclusive of the queue filter meaning any match ids returned must match both the queue and type filters.
+  */
+  type: 'ranked' | 'normal' | 'tourney' | 'tutorial'
+  /**
+   * Defaults to 0. Start index.
+  */
+  start: number
+  /**
+   * Defaults to 20. Valid values: 0 to 100. Number of match ids to return.
+  */
+   count: number
 }

@@ -31,3 +31,11 @@ export interface BySummonerId {
   id: string
   server: Server
 }
+
+export interface ByMe {
+  /**
+   * Bearer token
+  */
+  Authorization: string
+  server: Server
+}

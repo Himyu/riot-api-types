@@ -1,14 +1,20 @@
-import { Metadata } from "./Metadata";
+import Metadata from "./Metadata";
 import { Position } from '../../Position'
 import { DragonSoul, MonsterSubType, MonsterType } from '../../Monster';
 import { LaneType } from '../../Lanes';
 import { BuildingType, TowerType } from '../../Buildings';
 
 export default interface MatchTimeline {
+  /**
+   * Match metadata.
+  */
   metadata: Metadata
+  /**
+   * Match-Timeline info.
+  */
   info: {
-    frameInterval: number 
     frames: Array<MatchTimelineFrame>
+    frameInterval: number 
   }
 }
 
