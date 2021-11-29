@@ -1,6 +1,6 @@
 import Metadata from "./Metadata";
 
-export default interface Match {
+export interface Match {
   /**
    * Match metadata.
   */

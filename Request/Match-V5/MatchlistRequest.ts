@@ -1,6 +1,6 @@
 import { Region } from '../../Region'
 
-export default interface MatchListRequest {
+export interface MatchListRequest {
   puuid: string
   region: Region
 }

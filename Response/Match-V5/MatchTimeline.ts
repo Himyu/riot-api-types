@@ -4,7 +4,7 @@ import { DragonSoul, MonsterSubType, MonsterType } from '../../Monster';
 import { LaneType } from '../../Lanes';
 import { BuildingType, TowerType } from '../../Buildings';
 
-export default interface MatchTimeline {
+export interface MatchTimeline {
   /**
    * Match metadata.
   */

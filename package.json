@@ -1,6 +1,6 @@
 {
   "name": "@rcvolus/riot-api-types",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This repository is a collection of types for the Riot API requests and responses",
   "main": "index.ts",
   "repository": {
