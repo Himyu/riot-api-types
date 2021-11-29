@@ -14,4 +14,5 @@ export * from './Request/Summoner-V4/SummonerRequests'
 export * from './Response/Match-V5/Match'
 export type MatchList = Array<string>
 export * from './Response/Match-V5/MatchTimeline'
+export * from './Response/Match-V5/Metadata'
 export * from './Response/Summoner-V4/Summoner'
